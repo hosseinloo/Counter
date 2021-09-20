@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Project number counter with js" />
+        <meta name="keywords" content="js html css counter project bootstrap" />
+        <meta name="author" content="Hossein Ghorbanloo" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vazir-font/30.1.0/font-face.css"
+            integrity="sha512-ZHFuHiK3EA1uh2tx7nB0j9HyXR/IAFW24KVNFGjY8QIjtDKHmcowjUyObXF40wYrG25+kECHEbH8rL+HbvRwYA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.rtl.min.css"
+            integrity="sha512-Oum3efTCTItFSwMKStQtR3+/eSiYA/gpbybhbWSJplrbxWX7Y2RTERGfu3aadY4lRAvTkr1R7/BV0xEVsCwtOg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/js/bootstrap.min.js"
+            integrity="sha512-ewfXo9Gq53e1q1+WDTjaHAGZ8UvCWq0eXONhwDuIoaH8xz2r96uoAYaQCm1oQhnBfRXrvJztNXFsTloJfgbL5Q=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="./index.css" />
+        <link rel="icon" href="./stopwatch.svg" />
+        <title>شمارنده</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row justify-content-center pt-5">
+                <div class="col-md-6 col-12 text-center">
+                    <h1 class="text-center display-4 text-success mb-5">شمارنده</h1>
+                    <form method="GET" action="" class="mb-0">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputCounter" autocomplete="off"
+                                placeholder="یک عدد به ثانیه وارد کنید..." aria-label="Example text with button addon"
+                                aria-describedby="button-addon1" />
+                            <button class="btn btn-success" type="button" id="startCounter">
+                                شروع
+                            </button>
+                        </div>
+                        <p class="text-danger text-start pt-1" id="errorMessage"></p>
+                    </form>
+                    <div class="radial-progress mb-5" data-progress="100" data-number="0" dir="ltr">
+                        <div class="circle">
+                            <div class="mask full">
+                                <div class="fill"></div>
+                            </div>
+                            <div class="mask half">
+                                <div class="fill"></div>
+                                <div class="fill fix"></div>
+                            </div>
+                            <div class="shadow"></div>
+                        </div>
+                    </div>
+                    <div class="message text-center">
+                        <span class="text-success d-none" id="successMessage">شمارنده با موفقیت به پایان رسید .</span>
+                        <span class="text-success d-none" id="loadingMessage">در حال اجرا...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./jquery.js"></script>
+        <script src="./index.js"></script>
+    </body>
+
+</html>
