@@ -1,7 +1,18 @@
 // متغیرها
 let input = document.getElementById('inputCounter');
 let btn = document.getElementById('startCounter');
+function validNum(number) {
+    let valid = number.toString();
+    let arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    for (let i = 0; i <= arr.length - 1; i++) {
+        if (valid[0] == i || valid[1] == i || valid[2] == i || valid[3] == i || valid[4] == i || valid[5] == i || valid[6] == i || valid[7] == i || valid[8] == i || valid[9] == i) {
+            return true;
+        }else {
 
+            return false
+        }
+    }
+}
 btn.addEventListener('click', function(e) {
     // متغیرها
     let inputVal = parseInt(input.value);
@@ -12,9 +23,8 @@ btn.addEventListener('click', function(e) {
     let loadingMsg = document.getElementById('loadingMessage');
     //اعتبار سنجی اینپوت
     try {
-        console.log(Number(String(inputVal)[5]));
         // مشخص کردن متن ارور در صورت خالی بودن و استرینگ بودن
-        if (isNaN(inputVal) || Math.sign(Number(input.value))== -1 || isNaN(Number(String(inputVal)[1])) || isNaN(Number(String(inputVal)[2])) || isNaN(Number(String(inputVal)[3])) || isNaN(Number(String(inputVal)[4])) || isNaN(Number(String(inputVal)[5]))) {
+        if (isNaN(input.value) || Math.sign(Number(input.value))== -1) {
             radialProgress.setAttribute('data-number', 0);
             throw new Error('لطفا عدد را به درستی وارد کنید...');
         }else if(!isNaN(inputVal)) {
