@@ -7,6 +7,9 @@ body {
 form {
   height: 100px;
 }
+.off {
+  display: none;
+}
 
 #errorMessage {
   font-size: 14px;
